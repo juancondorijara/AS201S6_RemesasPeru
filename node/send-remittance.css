@@ -1,0 +1,48 @@
+button {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+input {
+    font-weight: bold;
+    text-align: center;
+}
+
+textarea {
+    height: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    background-color: black;
+    font-weight: normal;
+    font-size: 50px;
+    font-family: fantasy;
+}
+
+body {
+    background: url("./images/fondo.png");
+    background-repeat: no-repeat;
+    font-family: tahoma;
+    font-size: 33px;
+    display: flex;
+    flex-direction: row;
+    background-size: 100em;
+}
+
+#readArea {
+    margin-right: 1rem;
+    margin-right: 1rem;
+    flex-basis: -10%;
+}
+
+button:hover {
+    background-color: yellow;
+}

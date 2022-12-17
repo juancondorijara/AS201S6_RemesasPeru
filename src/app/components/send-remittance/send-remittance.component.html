@@ -1,0 +1,173 @@
+<div class="container" style="text-align: center">
+    <div>
+        <h1>ENVIAR REMESA</h1>
+    </div>
+
+    <br/>
+
+    <div class="row justify-content-center">
+        <div class="card online-courses-card" style="width: 800px;">
+            <div class="row">
+                <label class="form-label">
+                    <!-- <br/> -->
+                    CUENTA A ENVIAR
+                    <textarea id="addressInput" class="form-control" placeholder="0x0000000000000000000000000000000000000000"></textarea>
+                </label>
+
+                <label class="form-label">ETH A ENVIAR
+                    <input id="amountInput" type="number" class="form-control" (keyup)="percentage()" placeholder="0" [(ngModel)]="account.balanceToSend" />
+                </label>
+            </div>
+
+            <br/>
+
+            <label class="form-label" style="font-size: 18px; color:blue">
+                LA COMISIÓN DEL 3% ES: <input type="number" class="form-control" placeholder="0" disabled [(ngModel)]="account.commission" />
+            </label>
+
+            <!-- <br/> -->
+
+            <label class="form-label" style="font-size: 18px; color:blue">
+                EL GAS ES: <input type="number" class="form-control" placeholder="0" disabled [(ngModel)]="account.gas" /> 
+            </label>
+
+            <!-- <br/> -->
+
+            <label class="form-label" style="font-size: 18px; color:blue">
+                EL TOTAL ES: <input type="number" class="form-control" placeholder="0" disabled [(ngModel)]="account.total" />
+            </label>
+
+            <br/>
+
+            <div class="row">
+                <div class="form-outline col">
+                    <button type="button" class="btn btn-dark" (click)="updateAccountInfo()">
+                        REALIZAR ENVÍO
+                    </button>
+                </div>
+            </div>
+
+            <br/>
+        </div>
+
+
+
+        <!-- <br/>
+        <br/>
+        <br/>
+        <div id="readArea">
+            <button onclick="connectMetamask()" class="btn btn-dark">CONNECT TO METAMASK</button>
+            <p id="userArea">Status: Not connected to Metamask</p>
+
+            <button onclick="connectContract()" class="btn btn-dark">CONNECT TO CONTRACT</button>
+            <p id="contractArea">Status: Not connected to Contract</p>
+
+            <button onclick="getContractAccount()" class="btn btn-dark"> GET CONTRACT ACCOUNT </button>
+            <p id="contractAccount">Contract Account: Not Connected to Contract</p>
+
+            <button onclick="getBalanceApple()" class="btn btn-dark">GET BALANCE OF THE CONTRACT</button>
+            <p id="balanceArea">Balance: Not Connected to Contract</p>
+
+        </div>
+
+        <div id="writeArea">
+            <button onclick="depositContract()" class="btn btn-dark">Send ether to the Contract</button><br>
+            <input type="number" id="depositInput" placeholder="Enter Amount"><br> <br>
+
+            <button onclick="withdraw()" class="btn btn-dark">WITHDRAW ETHER TO ANY ADDRESS</button> <br>
+            <input type="text" id="addressInput" placeholder="Enter Address"> <br>
+            <input type="number" id="amountInput" placeholder="Enter Amount">
+        </div>
+
+        <script>
+            let account;
+            const connectMetamask = async() => {
+                if (window.ethereum !== "undefined") {
+                    const accounts = await ethereum.request({
+                        method: "eth_requestAccounts"
+                    });
+                    account = accounts[0];
+                    document.getElementById("userArea").innerHTML = `User Account: ${account}`;
+                }
+            }
+
+            const connectContract = async() => {
+                const ABI = [{
+                    "inputs": [],
+                    "name": "deposit",
+                    "outputs": [],
+                    "stateMutability": "payable",
+                    "type": "function"
+                }, {
+                    "inputs": [{
+                        "internalType": "address payable",
+                        "name": "_to",
+                        "type": "address"
+                    }, {
+                        "internalType": "uint256",
+                        "name": "_amount",
+                        "type": "uint256"
+                    }],
+                    "name": "withdraw",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                }, {
+                    "inputs": [],
+                    "name": "getAddress",
+                    "outputs": [{
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }],
+                    "stateMutability": "view",
+                    "type": "function"
+                }, {
+                    "inputs": [],
+                    "name": "getBalance",
+                    "outputs": [{
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }],
+                    "stateMutability": "view",
+                    "type": "function"
+                }];
+                //const Address = "0x8170A5681150230E1c87701c86443ac2Dc5F138c";
+                const Address = "0x00541f62640f9779275AFcFAa56A17e0d22A55c7";
+                window.web3 = await new Web3(window.ethereum);
+                window.contract = await new window.web3.eth.Contract(ABI, Address);
+                document.getElementById("contractArea").innerHTML = "Connected to Contract";
+            }
+
+            const getContractAccount = async() => {
+                const data = await window.contract.methods.getAddress().call();
+                document.getElementById("contractAccount").innerHTML = `Contract Account: ${data}`;
+            }
+
+            const getBalanceApple = async() => {
+                const data = await window.contract.methods.getBalance().call();
+                document.getElementById("balanceArea").innerHTML = `Contract Balance: ${data}`;
+            }
+
+            const depositContract = async() => {
+                const amount = document.getElementById("depositInput").value;
+                await window.contract.methods.deposit().send({
+                    from: account,
+                    value: amount
+                });
+            }
+
+            const withdraw = async() => {
+                const amount = document.getElementById("amountInput").value;
+                const address = document.getElementById("addressInput").value;
+                await window.contract.methods.withdraw(address, amount).send({
+                    from: account
+                });
+            }
+        </script> -->
+
+
+
+    </div>
+</div>

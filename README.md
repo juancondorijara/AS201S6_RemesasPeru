@@ -1,4 +1,4 @@
-# AS201-PIB-T02-REMESASPERU
+# AS201S6_RemesasPeru
 
 ## **Integrantes:**
 

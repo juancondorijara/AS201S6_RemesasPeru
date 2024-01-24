@@ -5,7 +5,7 @@ on:
       - develop-angular
 
 jobs:
-  #SONARCLOUDD
+  #SONARCLOUD
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest

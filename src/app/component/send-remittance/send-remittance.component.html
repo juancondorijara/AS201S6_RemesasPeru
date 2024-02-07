@@ -1,0 +1,57 @@
+<div class="container" style="text-align: center">
+    <div class="row justify-content-center">
+        <div class="card online-courses-card" style="width: 500px;">
+
+            <br/>
+
+            <h1>
+                ENVIAR REMESA <img src="../assets/images/peru.png" class="img-fluid" alt="" style="width: 60px; height: 40px">
+            </h1>
+
+            <div class="row">
+                <label class="form-label">
+                    CUENTA A ENVIAR:
+                    <textarea class="form-control" placeholder="0x0000000000000000000000000000000000000000" [(ngModel)]="account.remittanceRecipient"></textarea>
+                </label>
+
+                <label class="form-label">
+                    ETH A ENVIAR:
+                    <input type="number" class="form-control" (keyup)="percentage()" placeholder="0" [(ngModel)]="account.remittanceAmount" />
+                </label>
+            </div>
+
+            <br/>
+
+            <div>
+                <label class="form-label" style="font-size: 20px; color:blue">
+                    LA COMISIÓN DEL 3% ES: <input type="number" class="form-control" placeholder="0" disabled [(ngModel)]="account.commission" />
+                </label>
+            </div>
+
+            <div>
+                <label class="form-label" style="font-size: 20px; color:blue">
+                    EL GAS ESTIMADO ES: <input type="number" class="form-control" placeholder="0" disabled [(ngModel)]="account.gas" />
+                </label>
+            </div>
+
+            <div>
+                <label class="form-label" style="font-size: 20px; color:blue">
+                    EL TOTAL ESTIMADO ES: <input type="number" class="form-control" placeholder="0" disabled [(ngModel)]="account.total" />
+                </label>
+            </div>
+
+            <br/>
+
+            <div class="row">
+                <div class="form-outline col">
+                    <button type="button" class="btn btn-dark" (click)="sendRemittance()">
+                        REALIZAR ENVÍO
+                    </button>
+                </div>
+            </div>
+
+            <br/>
+
+        </div>
+    </div>
+</div>

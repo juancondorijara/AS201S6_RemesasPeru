@@ -1,0 +1,69 @@
+<div class="card-body">
+    <section class="online-courses">
+        <div class="container" style="text-align: center">
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card online-courses-card" style="width: 500px">
+                        <br/>
+                        <br/>
+                        <h1>
+                            ENVIOS A PERÚ <img src="../assets/images/peru.png" class="img-fluid" alt="" style="width: 60px; height: 35px">
+                        </h1>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <div class="form-outline col">
+                                <label>ENVIAR: </label>
+                                <input type="text" placeholder="100.00" [(ngModel)]="account.remittanceRecipient">
+                                <select style="color: black; font-weight: bold;" aria-label="Filtro">
+                                    <option value=1 style="color: black; font-weight: bold;">SepoliaETH</option>
+                                    <option value=2 style="color: black; font-weight: bold;">GoerliETH</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="form-outline col">
+                                <label>RECIBIR: </label>
+                                <input type="text" placeholder="100.00" [(ngModel)]="account.remittanceRecipient">
+                                <select style="color: black; font-weight: bold;" aria-label="Filtro" disabled>
+                                    <option value=1 style="color: black; font-weight: bold;">SepoliaETH</option>
+                                    <option value=2 style="color: black; font-weight: bold;">GoerliETH</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <div class="form-outline col">
+                                <button type="button" class="btn btn-success" (click)="goSendRemittance()">ENVIAR</button>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4" style="width: 300px"></div>
+
+                <div class="col-lg-4 col-md-4" style="width: 500px">
+                    <div class="card online-courses-card">
+                        <br/>
+                        <br/>
+                        <h1>ENTRA A LA WEB 3.0</h1>
+                        <br/>
+                        <label class="form-label">TU CUENTA:</label>
+                        <textarea class="form-control" disabled="true">{{ account.address }}</textarea>
+                        <br/>
+                        <label class="form-label">TU ETH:</label>
+                        <textarea class="form-control" disabled="true">{{ account.balance }}</textarea>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>

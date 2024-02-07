@@ -1,0 +1,15 @@
+[{
+    "inputs": [{
+        "internalType": "address payable",
+        "name": "_remittanceRecipient",
+        "type": "address"
+    }, {
+        "internalType": "uint256",
+        "name": "_remittanceAmount",
+        "type": "uint256"
+    }],
+    "name": "sendRemittance",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+}]

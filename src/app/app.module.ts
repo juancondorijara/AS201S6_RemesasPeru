@@ -5,14 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SendRemittanceComponent } from './components/send-remittance/send-remittance.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
+import { HomePageComponent } from './component/home-page/home-page.component';
+import { SendRemittanceComponent } from './component/send-remittance/send-remittance.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SendRemittanceComponent,
-    HomePageComponent
+    HomePageComponent,
+    SendRemittanceComponent
   ],
   imports: [
     BrowserModule,

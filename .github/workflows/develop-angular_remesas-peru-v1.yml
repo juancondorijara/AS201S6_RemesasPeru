@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_3FBFBD1B4AF341068FB8D96583698F9F }}
-        password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_B52481D28BD645A1B7070CE6A829FF04 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_537fdeb6fb98482893be9a6690349911 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_220a78d508bd484791c236d075eff342 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
-        push: false
-        tags: index.docker.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_3FBFBD1B4AF341068FB8D96583698F9F }}/juan321/remesas_peru:${{ github.sha }}
+        push: true
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_537fdeb6fb98482893be9a6690349911 }}/remesas_peru:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'remesas-peru-v1'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5DC13266F07F43EEA540D00E4972FDE3 }}
-        images: 'index.docker.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_3FBFBD1B4AF341068FB8D96583698F9F }}/juan321/remesas_peru:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_66b3ef04dd614ce689d4c91ec2b6a9cb }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_537fdeb6fb98482893be9a6690349911 }}/remesas_peru:${{ github.sha }}'

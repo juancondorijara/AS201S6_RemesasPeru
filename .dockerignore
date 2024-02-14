@@ -1,2 +1,8 @@
+Dockerfile
 node_modules
-dist
+###dist
+.git
+.github
+.gitignore
+README.md
+sonar-project.properties

@@ -6,7 +6,7 @@ on:
 
 jobs:
   #DOCKERHUB
-  build_dockerhub:
+  dockerhub:
     name: Build and Push Image
     runs-on: ubuntu-latest
     steps:

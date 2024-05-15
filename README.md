@@ -8,10 +8,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     
-    //----------Configuración AQUI (dejar este comentario, NO afecta al archivo)----------
+    //----------Configuración AQUI (quitar este comentario, SI afecta al archivo)----------
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    //----------Configuración AQUI (dejar este comentario, NO afecta al archivo)----------
+    //----------Configuración AQUI (quitar este comentario, SI afecta al archivo)----------
 
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

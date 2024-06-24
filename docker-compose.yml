@@ -1,8 +1,9 @@
-version: '3'
+version: '2'
 
 services:
   app:
-    image: juan321/ms_content_moderator_be:latest
+    image: juan321/remesas_peru:latest
+    container_name: remesas_peru
     ports:
       - "4200:4200"
     #environment:

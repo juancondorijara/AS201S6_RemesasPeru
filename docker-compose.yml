@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    image: juan321/ms_content_moderator_be:latest
+    ports:
+      - "4200:4200"
+    #environment:
+    #  MY_ENVIRONMENT: ${MY_ENVIRONMENT}
+    #volumes:
+    #  - /ruta/en/el/host:/ruta/en/el/contenedor

@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_remittanceRecipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_remittanceAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendRemittance",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Juan Condori :D",
+			"kind": "dev",
+			"methods": {},
+			"title": "un simulador de Envío de Remesas",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "puede usar este contrato solo para la simulación de envío de remesas Commit",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contrac/RemesasPeru.sol": "RemesasPeru"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contrac/RemesasPeru.sol": {
+			"keccak256": "0x9ef3b4d58a3e4eb6744aa8fd448c78cfe292a144164cf1ef058f3395dc37a3b0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://afa7f46733421903aeba22c99a81375d057061c3ad2628eb0d1aa12f0dc9ffcc",
+				"dweb:/ipfs/QmezkqgfeAPjNJ5pXYBoeYA3jbsLfVqWVWaMXWFRGrrmsp"
+			]
+		}
+	},
+	"version": 1
+}

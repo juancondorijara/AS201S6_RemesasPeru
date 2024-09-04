@@ -34,7 +34,7 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {},
-			"notice": "puede usar este contrato solo para la simulación de envío de remesas Commit",
+			"notice": "puede usar este contrato solo para la simulación de envío de remesas Commit Nuevo",
 			"version": 1
 		}
 	},
@@ -55,11 +55,11 @@
 	},
 	"sources": {
 		"contrac/RemesasPeru.sol": {
-			"keccak256": "0x9ef3b4d58a3e4eb6744aa8fd448c78cfe292a144164cf1ef058f3395dc37a3b0",
+			"keccak256": "0xfbb4364d64f24d93d27b76652ebfecfd8e468335be9c6ce13bca61f7539b29d2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://afa7f46733421903aeba22c99a81375d057061c3ad2628eb0d1aa12f0dc9ffcc",
-				"dweb:/ipfs/QmezkqgfeAPjNJ5pXYBoeYA3jbsLfVqWVWaMXWFRGrrmsp"
+				"bzz-raw://6f2ec5127f2d9ccd448807de9d70da33e8f012b9a6561503f6bcd124305f8163",
+				"dweb:/ipfs/QmXsG98NKHSLGRqWynJTbtWn9TSQAQT6hwpt4hxppLfmic"
 			]
 		}
 	},

@@ -39,6 +39,11 @@ nvm install 14
 npm install -g @angular/cli@12.2.11
 ```
 
+- **Instalar Dependencias **
+```
+npm install
+```
+
 - **Ejecutar **
 ```
 npm start

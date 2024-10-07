@@ -36,7 +36,7 @@ nvm install 14
 
 - **Instalar Angular **
 ```
-nvm install 12.2.11
+npm install -g @angular/cli@12.2.11
 ```
 
 - **Ejecutar **

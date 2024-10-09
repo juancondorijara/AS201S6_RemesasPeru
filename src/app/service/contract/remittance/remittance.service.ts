@@ -23,7 +23,7 @@ export class RemittanceService {
       }
     })
   }
-  
+
   async sendRemittance(addressFrom: string, addressTo: string, ammount: number): Promise<any> {
     window.web3 = new Web3(window.ethereum);
     window.contract = new window.web3.eth.Contract(this.abiRemesasPeru, addressTo);

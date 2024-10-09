@@ -29,22 +29,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Comandos Configurar y Ejecutar el proyecto en GitHub Codespaces
 
-- **Instalar Node 14 **
+- **Instalar Node 14**
 ```
 nvm install 14
 ```
 
-- **Instalar Angular **
+- **Instalar Angular**
 ```
 npm install -g @angular/cli@12.2.11
 ```
 
-- **Instalar Dependencias **
+- **Instalar Dependencias**
 ```
 npm install
 ```
 
-- **Ejecutar **
+- **Ejecutar**
 ```
 npm start
 ```
